@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  
+  body {
+    background-color: #F8F5F0;
+    color: #242222;
+    overflow-x: hidden;
+  }
+
+  /* Editorial Headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F5F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DCCFC1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B9827A;
+}
+
+/* Glass & Luxury Effects */
+.glass-nav {
+  background: rgba(248, 245, 240, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.luxury-border {
+  border-color: rgba(233, 222, 210, 0.85);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #B89B5E 0%, #D6C088 50%, #9E8348 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
